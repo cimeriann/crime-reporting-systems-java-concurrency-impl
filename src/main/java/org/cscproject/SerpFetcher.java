@@ -1,6 +1,5 @@
 package org.cscproject;
 import org.jsoup.Jsoup;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -19,6 +18,8 @@ public class SerpFetcher implements Callable<List<String>> {
     public List<String> call() {
         try {
             String url = "https://www.google.com/search?q=" + query.replace(" ", "+");
+//            String url = "https://duckduckgo.com/?q=crime+reporting+papers&t=h_\n";
+            System.out.println(url);
             Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0").get();
             Elements results = doc.select("h3");
 

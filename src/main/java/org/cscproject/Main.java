@@ -1,8 +1,6 @@
 package org.cscproject;
 import java.util.*;
 import java.util.concurrent.*;
-import org.cscproject.SerpFetcher;
-import org.cscproject.ChartVisualizer;
 //import CSV
 public class Main {
     public static void main(String[] args) {
